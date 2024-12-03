@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Dictionary</title>
+</head>
+<body>
+<h1>
+    Traduccion
+</h1>
+    </header>
+
+    <main>
+        <div>
+            <div>
+                <label for="label">
+                    Translate to
+                </label>
+                <select title="selectorIdioma" name="idioma" id="opcionIdioma">
+                    <option value="English"> English </option>
+                    <option value="Spanish"> Spanish </option>
+                </select>
+            </div>
+            <div>
+                <input placeholder="Enter the word to translate" id="WordToTranslate" type="text">
+                <button title = "buttonTranslate"type="button" id="buttonTranslate"> Traducir</button>
+
+                <textarea  placeholder="translation" name="" id="ContainerTranslate"></textarea>
+                <textarea placeholder="Word Example"id="containerExample"></textarea>
+            </div>
+        </div>
+
+
+
+        
+            <div id="dictionary-container">
+                    <h2>Diccionario de Palabras Disponibles</h2>
+                    
+                <select title="selectorIdioma" name="idioma" id="wordsOption">
+                    <option value="english">Inglés -> Español</option>
+                    <option value="spanish">Español -> Inglés</option>
+                </select>
+                <h3>
+                    Ordenar palabras alfabeticamente 
+                </h3>
+                <select title="ordenador"id="sort">
+                    <option value="ASC">A-Z</option>
+                    <option value="DESC">Z-A</option>
+                </select>
+                    <ul id="wordList">
+                    </ul>
+            </div>
+            
+            
+            
+            <h2>
+                Agregar Palabras
+            </h2>
+
+            <form id="wordForm">
+
+                <select title=" a" name="selecionarIdioma" id="lenguageOption">
+                    <option value="enToEs">English to Spanis</option>
+                    <option value="esToEn">Spanish to English</option>
+                </select>
+
+                <label for="word">Word:</label>
+                <input type="text" id="word" placeholder="Write the word" required>
+        
+                <label for="translation">Translation:</label>
+                <input type="text" id="translation" placeholder="Write the translation" required>
+        
+                <label for="example">Example:</label>
+                <textarea id="example" placeholder="Write a exaample" rows="3" required></textarea>
+        
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="">Select a category</option>
+                    <option value="animals">Animals</option>
+                    <option value="fruit">Fruits</option>
+                    <option value="colors">colors</option>
+                    <option value="physical descriptions">physical descriptions</option>
+                    <option value="skills">skills</option>
+                    <option value="verbs">verbs</option>
+
+                </select>
+        
+                <button id="buttonAdd" type="button">Agregar Palabra</button>
+            </form>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script type="module" src="./scripts/app.js" defer></script>
+    <script type="module" src="./scripts/dictionary.js" defer></script> 
+    <script type="module" src="./scripts/wordList.js" defer></script>
+</body>
+</html>
